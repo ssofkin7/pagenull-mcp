@@ -1,0 +1,3 @@
+dist/
+# The MCP registry DNS key (SUMMARY.md, FEEDBACK-26): never commit it.
+*.pem

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.pagenull/mcp",
+  "title": "pagenull",
+  "description": "HTML or a URL to PDF or screenshot with a signed receipt. Nothing stored; files return as base64.",
+  "websiteUrl": "https://pagenull.dev/docs/ai-agents",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@pagenull/mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "PAGENULL_API_KEY",
+          "description": "Your pagenull API key, from https://pagenull.dev/dashboard/keys",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "PAGENULL_API_BASE",
+          "description": "API base URL. Default https://api.pagenull.dev",
+          "isRequired": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

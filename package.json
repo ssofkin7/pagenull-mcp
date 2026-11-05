@@ -1,0 +1,55 @@
+{
+  "name": "@pagenull/mcp",
+  "version": "0.1.0",
+  "mcpName": "dev.pagenull/mcp",
+  "description": "MCP server for the pagenull API: HTML or a URL to PDF or screenshot, templates, receipts and usage. Output comes back as base64 or is written to a path you give; nothing is stored.",
+  "type": "module",
+  "bin": {
+    "pagenull-mcp": "dist/index.js"
+  },
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "author": "Stefan Sofkin",
+  "homepage": "https://pagenull.dev/docs/ai-agents",
+  "bugs": {
+    "email": "support@pagenull.dev"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pdf",
+    "html-to-pdf",
+    "screenshot",
+    "pagenull"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "typescript": "^5",
+    "vitest": "^3.2.0"
+  }
+}
